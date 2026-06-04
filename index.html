@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquire — The AI Client Acquisition Platform for Coaches</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter (Sans) & Instrument Serif (Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Instrument Serif', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#D4AF37', // Premium Gold
+                            dark: '#B89028',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body class="text-white font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="max-w-7xl w-full mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+            </svg>
+            <span class="text-xl font-bold tracking-tight text-white">acquire.ai</span>
+        </div>
+        <div>
+            <a href="#onboarding-form" class="text-xs font-semibold text-brand border border-brand/30 bg-brand/5 px-4 py-2 rounded-full hover:bg-brand/10 transition-all">
+                Request Platform Beta
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Hero Grid -->
+    <main class="max-w-7xl w-full mx-auto px-6 md:px-12 py-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-grow">
+        
+        <!-- Left Column: Software Platform Value Proposition -->
+        <div class="lg:col-span-5 flex flex-col justify-center">
+            
+            <!-- Tag/Pill -->
+            <div class="inline-flex items-center gap-2 border border-brand/30 bg-brand/10 text-brand text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full w-fit mb-6">
+                Now in Private Beta
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-5xl md:text-6xl font-serif font-light text-white leading-[1.1] mb-6">
+                The AI Chief of Staff <br>
+                <span class="italic font-normal">That Fills Your</span> <br>
+                Coaching Calendar
+            </h1>
+
+            <!-- Supporting Paragraph -->
+            <p class="text-zinc-400 text-base md:text-lg mb-8 max-w-lg leading-relaxed">
+                Stop spending hours on manual prospecting and cold messaging. Acquire is an autonomous client acquisition platform built for Life, Executive, and Business coaches. It operates in the background—researching ideal clients, detecting transition signals, and drafting hyper-personalized outreach in your exact coaching voice.
+            </p>
+
+            <!-- Platform Value Prop Bullets -->
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3">
+                    <span class="text-brand mt-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    </span>
+                    <span class="text-zinc-300 text-sm">
+                        <strong class="text-white font-medium">Define Your Ideal Coachee (ICP)</strong> — Simply describe who you help. The platform scans professional networks, funding databases, and career changes to feed your pipeline daily.
+                    </span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-brand mt-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    </span>
+                    <span class="text-zinc-300 text-sm">
+                        <strong class="text-white font-medium">Clones Your Coaching Voice</strong> — Upload your existing content, books, or emails. The AI learns your philosophy to write deeply authentic, respect-first outreach.
+                    </span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-brand mt-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    </span>
+                    <span class="text-zinc-300 text-sm">
+                        <strong class="text-white font-medium">Approve Before Sending</strong> — Maintain total reputation safety. Approve or tweak every outbound message inside your dashboard before it ever goes out.
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Styled Web3Forms Beta Application Form -->
+            <div id="onboarding-form" class="bg-zinc-950 border border-zinc-900 rounded-xl p-5 md:p-6 w-full max-w-md shadow-lg">
+                <h3 class="text-base font-semibold text-white mb-1">Apply for Private Beta</h3>
+                <p class="text-xs text-zinc-500 mb-4">We are onboarding high-ticket coaches weekly. Request your sandbox access below.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="3f6a2c21-340c-4f11-a272-0c73df475620">
+                    
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Full Name</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            required 
+                            placeholder="Your Name"
+                            class="w-full bg-zinc-900 border border-zinc-800 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand/60 focus:ring-1 focus:ring-brand/30 placeholder-zinc-600 transition-all"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Email Address</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            required 
+                            placeholder="your.email@domain.com"
+                            class="w-full bg-zinc-900 border border-zinc-800 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand/60 focus:ring-1 focus:ring-brand/30 placeholder-zinc-600 transition-all"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Your Coaching Niche & Acquisition Challenge</label>
+                        <textarea 
+                            name="message" 
+                            required 
+                            rows="3"
+                            placeholder="E.g., Business Coaching. I want to automate reaching out to founders raising their Series-A rounds."
+                            class="w-full bg-zinc-900 border border-zinc-800 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand/60 focus:ring-1 focus:ring-brand/30 placeholder-zinc-600 transition-all resize-none"
+                        ></textarea>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="w-full bg-brand hover:bg-brand-dark text-black font-semibold text-sm rounded-lg py-3 transition-colors duration-200 flex items-center justify-center gap-2 mt-2"
+                    >
+                        Request Sandbox Access
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Column: Software Platform Interface Mockup -->
+        <div class="lg:col-span-7 w-full flex justify-center lg:justify-end">
+            <div class="bg-[#0A0A0A] border border-zinc-800 rounded-xl w-full max-w-2xl p-4 md:p-6 shadow-[0_0_50px_rgba(212,175,55,0.03)] flex gap-4 md:gap-6">
+                
+                <!-- Sidebar (Software Navigation) -->
+                <div class="hidden sm:flex flex-col justify-between w-40 border-r border-zinc-900 pr-4 py-2">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-1.5 px-2">
+                            <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" /></svg>
+                            <span class="text-xs font-bold tracking-tight text-white">acquire.ai</span>
+                        </div>
+                        <nav class="space-y-1">
+                            <a href="#" class="flex items-center gap-2 text-xs font-medium text-white bg-zinc-900 px-2 py-1.5 rounded-md">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                Dashboard
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1.5 rounded-md transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Leads & ICP
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1.5 rounded-md transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                                Voice Profiles
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1.5 rounded-md transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Calendar Sync
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="text-[10px] text-zinc-600 px-2">System Active</div>
+                </div>
+
+                <!-- Main Platform Area -->
+                <div class="flex-grow space-y-4">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h2 class="text-sm font-semibold">Welcome, Coach Sarah.</h2>
+                            <p class="text-[10px] text-zinc-500">Your AI Chief of Staff has compiled your daily prospects.</p>
+                        </div>
+                        <button class="bg-zinc-900 border border-zinc-800 text-brand text-[10px] font-semibold px-2.5 py-1 rounded-md flex items-center gap-1 hover:bg-zinc-800 transition-colors">
+                            <span>+</span> Create Campaign
+                        </button>
+                    </div>
+
+                    <!-- Platform Widget Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- Active AI Campaign -->
+                        <div class="bg-[#111111] border border-zinc-900 rounded-lg p-3 flex flex-col justify-between h-36">
+                            <div>
+                                <span class="text-[9px] uppercase tracking-wider text-zinc-500 font-semibold block mb-1">Active Campaign</span>
+                                <h3 class="text-xs font-semibold text-white">Executive Promotions (Tech)</h3>
+                                <p class="text-[10px] text-zinc-400 mt-1 line-clamp-2">Scanning LinkedIn updates for recently appointed Directors and VPs.</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-[9px] text-zinc-500 mb-1">
+                                    <span>Approval Queue</span>
+                                    <span>4 Pending Approval</span>
+                                </div>
+                                <div class="w-full bg-zinc-800 h-1 rounded-full overflow-hidden">
+                                    <div class="bg-brand h-full rounded-full" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action required inside SaaS -->
+                        <div class="bg-[#111111] border border-zinc-900 rounded-lg p-3 flex flex-col justify-between h-36">
+                            <div>
+                                <span class="text-[9px] uppercase tracking-wider text-zinc-500 font-semibold block mb-1.5">Drafts Awaiting Review</span>
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                                        <div class="text-[10px] text-zinc-300">
+                                            <span class="font-medium text-white">Review pitch to John D. (VP)</span>
+                                            <span class="text-zinc-500 block">Personalized based on leadership methodology.</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-brand"></div>
+                                        <div class="text-[10px] text-zinc-300">
+                                            <span class="font-medium text-white">Nurture Draft: Amanda L.</span>
+                                            <span class="text-zinc-500 block">Follow-up triggered 3 days after discovery call.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live Pipeline Status -->
+                        <div class="bg-[#111111] border border-zinc-900 rounded-lg p-3">
+                            <span class="text-[9px] uppercase tracking-wider text-zinc-500 font-semibold block mb-2">High-Ticket Pipeline</span>
+                            <div class="space-y-1.5">
+                                <div class="flex items-center justify-between text-[10px]">
+                                    <span class="text-zinc-300">David G. (Exec Director)</span>
+                                    <span class="text-brand bg-brand/10 text-[9px] px-1.5 py-0.25 rounded">Ready to Approve</span>
+                                </div>
+                                <div class="flex items-center justify-between text-[10px]">
+                                    <span class="text-zinc-300">Marcus T. (Tech Founder)</span>
+                                    <span class="text-yellow-400 bg-yellow-400/10 text-[9px] px-1.5 py-0.25 rounded">Discovery Booked</span>
+                                </div>
+                                <div class="flex items-center justify-between text-[10px]">
+                                    <span class="text-zinc-300">Jessica S. (Product VP)</span>
+                                    <span class="text-zinc-400 bg-zinc-800 text-[9px] px-1.5 py-0.25 rounded">In Queue</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Graph showing scheduled calls metric -->
+                        <div class="bg-[#111111] border border-zinc-900 rounded-lg p-3 flex flex-col justify-between">
+                            <div>
+                                <span class="text-[9px] uppercase tracking-wider text-zinc-500 font-semibold block mb-1">Performance Matrix</span>
+                                <span class="text-xs font-bold text-white">12 Discovery Calls Booked</span>
+                            </div>
+                            <div class="h-12 w-full mt-2 flex items-end">
+                                <svg class="w-full h-full text-brand" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                    <path d="M0 40 L10 35 L20 38 L30 25 L40 28 L50 18 L60 22 L70 12 L80 15 L90 5 L100 2 L100 40 Z" fill="url(#goldGrad)" stroke="currentColor" stroke-width="1.5"></path>
+                                    <defs>
+                                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.3" />
+                                            <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Feature Grid (SaaS Platform Highlights) -->
+    <footer class="max-w-7xl w-full mx-auto px-6 md:px-12 py-12 border-t border-zinc-900 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Col 1 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 rounded bg-zinc-900 text-brand">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-1">Targeting & ICP Builder</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">No manual lists. Define your ideal coaching client within our software, and let our crawlers surface perfect prospects hitting transition events.</p>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 rounded bg-zinc-900 text-brand">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-1">AI-Powered Voice Engines</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Train our AI voice engines on your articles, podcast transcripts, or books. Ensure outreach communication matches your professional etiquette perfectly.</p>
+                </div>
+            </div>
+            <!-- Col 3 -->
+            <div class="flex items-start gap-3">
+                <div class="p-2 rounded bg-zinc-900 text-brand">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-1">Reputation Approval Board</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">You hold the keys. Approve or modify messages before they sync with your LinkedIn, email, or CRM channels, ensuring zero brand dilution.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
