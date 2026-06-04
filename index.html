@@ -326,6 +326,46 @@
             </div>
         </div>
     </footer>
+<!-- Coach Form HTML Structure -->
+    <form id="waiting-list-form">
+      <input type="text" id="name-input" placeholder="Enter your name" required />
+      <input type="email" id="email-input" placeholder="Enter your email" required />
+      <input type="hidden" id="user-type-marker" value="Coach" /> 
+      <button type="submit">Join the Waiting List</button>
+    </form>
 
+    <script>
+      const form = document.getElementById('waiting-list-form');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault(); 
+        
+        const formData = {
+          name: document.getElementById('name-input').value,
+          email: document.getElementById('email-input').value,
+          userType: document.getElementById('user-type-marker').value,
+          timestamp: new Date().toISOString()
+        };
+
+        try {
+          const response = await fetch('https://drwarren.app.n8n.cloud/webhook/lead-capture', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+            alert('Success! You have been added to the waiting list.');
+          } else {
+            alert('Something went wrong. Please try again.');
+          }
+        } catch (error) {
+          console.error('Error submitting form:', error);
+        }
+      });
+    </script>
+    
 </body>
 </html>
